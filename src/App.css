@@ -1,0 +1,119 @@
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --navbar-height: 2rem;
+}
+
+body {
+  background-color: blanchedalmond;
+}
+
+.navbar {
+  width: 100%;
+  height: var(--navbar-height);
+  left: 0;
+  top: 0;
+  display: flex;
+  position: fixed;
+  justify-content: end;
+  align-items: center;
+  background: #000;
+}
+
+.navbar > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-right: 1rem;
+  
+}
+
+.navbar a {
+  font-size: larger;
+  text-decoration: none;
+  color: #a9d95c;
+}
+
+.mainPanel {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: var(--navbar-height);
+}
+
+.product__input {
+  margin-bottom: 2rem;
+}
+
+.item__list {
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+
+.item > p {
+  margin-right: 2rem;
+
+}
+
+.item > p::before {
+  content: "• ";
+}
+
+.placeholder-img {
+
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-size: cover;
+  background-image: url(https://ars.els-cdn.com/content/image/3-s2.0-B9780121197926501157-f58-23-9780121197926.jpg);
+
+}
+
+.loading {
+  animation: pulse 2.5s infinite;
+}
+
+
+
+/* square display of image */
+.card-img {
+
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: block;
+  object-position: center;
+  object-fit: cover;
+
+
+}
+
+.card-img:hover {
+  margin-left: -2px;
+  border: #000;
+  border-width: 0.2rem;
+  border-style: double;
+  transition: 0.4s ease-in-out;
+}
+
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

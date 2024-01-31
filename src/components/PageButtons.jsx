@@ -7,28 +7,23 @@ const PageButtons = ({ productsLength, limit, setPageNumber }) => {
 
     useEffect(() => {
 
-            let numOfPages = productsLength / limit
-            setPages(Math.ceil(numOfPages))
+        let numOfPages = productsLength / limit
+        setPages(Math.ceil(numOfPages))
 
     }, [productsLength])
 
 
     return (
         <>
-
             <span>
-
                 <button>Back</button>
 
                 {[...Array(pages)].map((_, i) =>
-                    <button onClick={() => setPageNumber(i + 1)}>{i + 1}</button>
+                    <button key={i} onClick={() => setPageNumber(i + 1)}>{i + 1}</button>
                 )}
 
                 <button>Next</button>
-
             </span>
-
-
         </>
     )
 
